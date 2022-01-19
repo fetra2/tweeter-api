@@ -10,3 +10,7 @@ api = Namespace("tweets")
 class TweetResource(Resource):
     def get(self):
         return "Hello from the 'tweets' namespace!"
+
+@api.route("/<int:id>")
+def get_tweet(self):
+    return jsonify([id]) #TODO
